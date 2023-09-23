@@ -1,0 +1,104 @@
+{"games": [
+    {
+        "teamPoints": "13",
+        "agent": "SOVA",
+        "enemyPoints": "4",
+        "status": "win"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "PHOENIX",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "SAGE",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "SAGE",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "SAGE",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    },
+    {
+        "teamPoints": "4",
+        "agent": "JETT",
+        "enemyPoints": "13",
+        "status": "lose"
+    }
+]}
