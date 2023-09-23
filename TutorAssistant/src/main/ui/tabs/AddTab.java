@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-// Represents a tab that allows user to add match details into text fields and adds match into match history
 public class AddTab extends Tab {
     private JPanel panel;
     private JLabel labelUsername;
@@ -21,29 +20,23 @@ public class AddTab extends Tab {
     private static TextField textFieldRealName;
     private static TextField textFieldSchool;
     private static TextField textFieldSubject;
-    private static TextField textFieldStatus;
 
     private static String username;
     private static String realName;
     private static String school;
     private static String subject;
-    private static String status;
 
-    // REQUIRES: MatchHistoryUI controller that holds this tab
-    // EFFECTS: creates add tab that allows user to enter match details into text fields
     public AddTab(StudentDataUI controller) {
         super(controller);
         placeAddButton();
     }
 
-    // MODIFIES: this
-    // EFFECTS: initializes GUI frame, panel, labels, button
     public void init() {
         setLayout(new GridLayout(1, 20));
         panel = new JPanel();
         panel.setSize(600, 400);
 
-        labelUsername = new JLabel("Enter display name");
+        labelUsername = new JLabel("Enter discord username");
         textFieldUsername = new TextField(30);
         textFieldUsername.setColumns(45);
 
@@ -59,17 +52,11 @@ public class AddTab extends Tab {
         textFieldSubject = new TextField(30);
         textFieldSubject.setColumns(45);
 
-        labelStatus = new JLabel("Signing up as student or tutor assistant?");
-        textFieldStatus = new TextField(30);
-        textFieldStatus.setColumns(45);
-
         b1 = new JButton(ButtonNames.ADD.getValue());
         b1.setPreferredSize(new Dimension(90,30));
 
     }
 
-    // MODIFIES: this
-    // EFFECTS: adds labels and text fields to JPanel
     private void addToPanel() {
         panel.add(labelUsername);
         panel.add(textFieldUsername);
@@ -79,13 +66,9 @@ public class AddTab extends Tab {
         panel.add(textFieldSchool);
         panel.add(labelSubject);
         panel.add(textFieldSubject);
-        panel.add(labelStatus);
-        panel.add(textFieldStatus);
         panel.add(b1);
     }
 
-    //MODIFIES: this
-    //EFFECTS: adds a generate report button that prints app status when clicked
     private void placeAddButton() {
         init();
         addToPanel();
@@ -101,10 +84,7 @@ public class AddTab extends Tab {
                     realName = textFieldRealName.getText();
                     school = textFieldSchool.getText();
                     subject = textFieldSubject.getText();
-                    status = textFieldStatus.getText();
                     getController().addCommand(username, realName, school, subject);
-
-                    getController().addStatus(status);
                 }
             }
         });

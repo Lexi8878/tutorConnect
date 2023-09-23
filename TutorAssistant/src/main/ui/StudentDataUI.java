@@ -14,7 +14,7 @@ public class StudentDataUI extends JFrame {
     public static final int ADD_TAB_INDEX = 1;
     public static final int CHAT_ROOM_TAB_INDEX = 2;
     public static final int SAVE_LOAD_TAB_INDEX = 3;
-    public static final int WIDTH = 500;
+    public static final int WIDTH = 600;
     public static final int HEIGHT = 600;
     private static final String JSON_STORE = "./data/studentdata.json";
 
@@ -40,11 +40,9 @@ public class StudentDataUI extends JFrame {
 
     private StudentDataUI() throws FileNotFoundException {
         frame = new JFrame();
-        frame.setTitle("Tutor Assistant App");
+        frame.setTitle("TutorConnect App");
         frame.setSize(WIDTH, HEIGHT);
-
         frame. setDefaultCloseOperation(JFrame. EXIT_ON_CLOSE);
-
 
         jsonWriter = new JsonWriter(JSON_STORE);
         jsonReader = new JsonReader(JSON_STORE);
@@ -107,7 +105,7 @@ public class StudentDataUI extends JFrame {
         sidebar.add(addTab, ADD_TAB_INDEX);
         sidebar.setTitleAt(ADD_TAB_INDEX, "Sign-up");
         sidebar.add(chatRoomTab, CHAT_ROOM_TAB_INDEX);
-        sidebar.setTitleAt(CHAT_ROOM_TAB_INDEX, "Chat Room");
+        sidebar.setTitleAt(CHAT_ROOM_TAB_INDEX, "Find");
         sidebar.add(saveLoadTab, SAVE_LOAD_TAB_INDEX);
         sidebar.setTitleAt(SAVE_LOAD_TAB_INDEX, "Save/Load");
     }

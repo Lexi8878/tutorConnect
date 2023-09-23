@@ -8,13 +8,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-// Represents the home tab of the match history application with buttons that sends user to different tabs
 public class HomeTab extends Tab {
-    private static final String INIT_GREETING = "Welcome";
+    private static final String INIT_GREETING = "Welcome to TutorConnect";
     private JLabel greeting;
 
-    // REQUIRES: MatchHistoryUI controller that holds this tab
-    // EFFECTS: constructs a home tab for console with buttons and a greeting
     public HomeTab(StudentDataUI controller) {
         super(controller);
 
@@ -25,16 +22,12 @@ public class HomeTab extends Tab {
         placeViewButton();
     }
 
-    // MODIFIES: this
-    // EFFECTS: creates greeting at top of console
     private void placeGreeting() {
         greeting = new JLabel(INIT_GREETING, JLabel.CENTER);
         greeting.setSize(WIDTH, HEIGHT / 3);
         this.add(greeting);
     }
 
-    // MODIFIES: this
-    // EFFECTS: constructs an add button that switches to the add tab on the console
     private void placeAddButton() {
         JPanel addBlock = new JPanel();
         JButton addButton = new JButton(ButtonNames.GO_TO_ADD.getValue());
@@ -53,8 +46,6 @@ public class HomeTab extends Tab {
         this.add(addBlock);
     }
 
-    // MODIFIES: this
-    // EFFECTS: constructs a view button that switches to the view match history tab on the console
     private void placeViewButton() {
         JPanel statusBlock = new JPanel();
         JButton statusButton = new JButton(ButtonNames.GO_TO_FIND_TUTOR.getValue());

@@ -11,13 +11,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-// Represents a reader that reads MatchHistory from JSON data stored in file
-// The following code is taken from the JsonReader class in the JsonSerializationDemo project:
-// https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo/blob/master/src/main/persistence/JsonReader.java
 public class JsonReader {
     private String source;
 
-    // EFFECTS: constructs reader to read from source file
     public JsonReader(String source) {
         this.source = source;
     }
@@ -38,15 +34,12 @@ public class JsonReader {
         return contentBuilder.toString();
     }
 
-    // EFFECTS: parses match history from JSON object and returns it
     private StudentData parseStudentData(JSONObject jsonObject) {
         StudentData sd = new StudentData();
         addStudents(sd, jsonObject);
         return sd;
     }
 
-    // MODIFIES: mh
-    // EFFECTS: parses matches from JSON object and adds them to match history
     private void addStudents(StudentData sd, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("students");
         for (Object json : jsonArray) {

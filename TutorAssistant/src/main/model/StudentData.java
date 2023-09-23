@@ -10,17 +10,27 @@ import java.util.List;
 public class StudentData implements Writable {
 
     private List<Student> students;
-    private List<Tutor> tutors;
+    private String course;
+    private String school;
 
-    // EFFECTS: Constructs a match history with an empty list of games
     public StudentData() {
         this.students = new ArrayList<>();
-        this.tutors = new ArrayList<>();
     }
 
     public void addStudent(Student s) {
         this.students.add(s);
+        this.course = s.getCourseNeeded();
+        this.school = s.getSchoolNeeded();
     }
+
+    public String getCourse() {
+        return this.course;
+    }
+
+    public String getSchool() {
+        return this.school;
+    }
+
 
     @Override
     public JSONObject toJson() {
@@ -29,7 +39,6 @@ public class StudentData implements Writable {
         return json;
     }
 
-    // EFFECTS: returns games in match history as a JSON array
     private JSONArray studentsToJson() {
         JSONArray jsonArray = new JSONArray();
 
@@ -38,29 +47,5 @@ public class StudentData implements Writable {
         }
 
         return jsonArray;
-    }
-
-    public List<String> getTutors() {
-        List<String> tutorList = new ArrayList<>();
-        for (Tutor t: tutors) {
-            String s = t.getUserName();
-            tutorList.add(s);
-        }
-
-        return tutorList;
-    }
-
-    public List<String> getTutorsToDisplay() {
-        return getTutors();
-    }
-
-    public String tutorsDisplaying() {
-        List<String> running = getTutorsToDisplay();
-        StringBuilder status = new StringBuilder();
-
-        for (String s : running) {
-            status.append("\n").append(s);
-        }
-        return status.toString();
     }
 }

@@ -1,6 +1,5 @@
 package ui;
 
-// Represents an enum of button names
 public enum ButtonNames {
     ADD("Add"),
     GO_TO_ADD("Sign-up"),

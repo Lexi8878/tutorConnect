@@ -1,5 +1,7 @@
 package model;
 
+import org.json.JSONObject;
+
 public class Tutor extends User {
     private boolean isPaid;
     private boolean isTeacher;
@@ -28,5 +30,16 @@ public class Tutor extends User {
 
     public void setTeacher(boolean teacher) {
         isTeacher = teacher;
+    }
+
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("username", username);
+        json.put("realName", realName);
+        json.put("school", school);
+        json.put("subject", subject);
+        json.put("isPaid", isPaid);
+        json.put("isTeacher", isTeacher);
+        return json;
     }
 }

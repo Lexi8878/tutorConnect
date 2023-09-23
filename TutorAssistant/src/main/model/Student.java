@@ -10,13 +10,21 @@ public class Student extends User implements Writable {
         super(username, realName, school, subject);
     }
 
+    public String getCourseNeeded() {
+        return subject;
+    }
+
+    public String getSchoolNeeded() {
+        return school;
+    }
+
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("username", username);
-        json.put("teamPoints", realName);
-        json.put("enemyPoints", school);
-        json.put("agent", subject);
+        json.put("realName", realName);
+        json.put("school", school);
+        json.put("subject", subject);
         return json;
     }
 
